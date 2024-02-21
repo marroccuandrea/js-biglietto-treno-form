@@ -9,7 +9,37 @@
     <title>Calcolo del biglietto del treno</title>
 </head>
 <body>
-    
+    <main>
+        <div class="container my-4">
+            <form action="">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" class="input-nome form-control" placeholder="Nome e cognome">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="input-km form-control" placeholder="Km da percorrere">
+                    </div>
+                    <div class="col-4">
+                        <select class="form-select select-age" >
+                            <option selected>Fascia d'età</option>
+                            <option value="rosso">Minorenne</option>
+                            <option value="verde">Maggiorenne</option>
+                            <option value="blu">Anziano</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn1 btn btn-primary m-3">Genera</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn1 btn btn-primary m-3">Annulla</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </main>
 
     <script src="js/script.js"></script>
 </body>
