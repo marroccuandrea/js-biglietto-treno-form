@@ -11,7 +11,8 @@
 <body>
     <main>
         <div class="container my-4">
-            <!-- <form action=""> -->
+            <h1 class="mb-4 text-center fw-bold">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            <form action="">
                 <div class="row">
                     <div class="col-4">
                         <input type="text" class="input-nome form-control" placeholder="Nome e cognome">
@@ -28,16 +29,42 @@
                         </select>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <button class="btn1 btn btn-primary m-3">Genera</button>
+                <div class="row ">
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <button class="btn1 btn btn-warning m-3">Genera</button>
+                        <button class="btn2 btn btn-warning m-3">Annulla</button>
                     </div>
-                    <div class="col-6">
-                        <button class="btn2 btn btn-primary m-3">Annulla</button>
+                    
+                </div>
+            </form>
+            <div class="container appear mx-auto d-none">
+                <div class="card text-bg-warning my-3">
+                    <div class="card-header">Prezzo e dati biglietto</div>
+                    <div class="card-body row">
+                        
+                        <div class="col">
+                            <h4>Nome Passeggero</h4>
+                            <p id="nome"></p>
+                        </div>
+                        <div class="col">
+                            <h4>Offerta</h4>
+                            <p id="offerta"></p>
+                        </div>
+                        <div class="col">
+                            <h4>Carrozza</h4>
+                            <p id="carrozza"></p>
+                        </div>
+                        <div class="col">
+                            <h4>Codice CP</h4>
+                            <p id="cp"></p>
+                        </div>
+                        <div class="col">
+                            <h4>Costo Biglietto</h4>
+                            <p id="output" class="card-text"></p></div>
+                        
                     </div>
                 </div>
-            <!-- </form> -->
-            <div class="output"></div>
+            </div>
         </div>
 
     </main>

@@ -8,7 +8,7 @@ const priceKm = 0.21;
 let minorenne = document.querySelector('.minorenne');
 let maggiorenne = document.querySelector('.maggiorenne');
 let anziano = document.querySelector('.anziano');
-
+const appear = document.querySelector('.container .appear');
 
 
 
@@ -16,36 +16,44 @@ let anziano = document.querySelector('.anziano');
 const btn1 = document.querySelector('.btn1');
 const btn2 = document.querySelector('.btn2');
 
-
-btn1.addEventListener('click', function(){
+// Bottone genera
+btn1.addEventListener('click', function(event){
+    event.preventDefault();
     let nome = inputNome.value;
     let km = inputKm.value;
     let eta = selectAge.value;
-    let price = parseFloat((km * priceKm).toFixed(2));
-    let underDisc = ((price * 20) /100);
-    let overDisc = ((price * 40) /100);
-    const priceDiscUnder = price - underDisc;
-    const priceDiscOver = price - overDisc;
-    // console.log(nome, km, eta, priceDiscOver);
-    if (eta == minorenne) {
-        console.log('Applico sconto 20%');
-        
-        console.log(priceDiscUnder);
-        document.getElementById('output').innerHTML = 'Hai diritto allo sconto del 20% !'
+    let price = parseFloat((priceKm * km).toFixed(2));
+    let underDisc = parseFloat((price * 20) /100);
+    let overDisc = parseFloat((price * 40) /100);
+    appear.classList.remove('d-none');
+    document.getElementById('nome').innerHTML = nome;
+    document.getElementById('carrozza').innerHTML = Math.floor(Math.random()* 10 + 1);
+    document.getElementById('cp').innerHTML = Math.floor(Math.random()* 90000 + 11111);
+    
+    console.log(nome, km, eta, underDisc, overDisc);
+    if (eta == "minorenne"){
+        let finalPrice = (parseFloat(price - underDisc)).toFixed(2);
+        console.log(finalPrice);
+        document.getElementById('output').innerHTML = finalPrice + ' €';
+        document.getElementById('offerta').innerHTML = 'Sconto al 20%';
     }
-    else if (eta == anziano){
-        console.log('Applico sconto del 40%');
-        underDisc;
-        console.log(priceDiscOver);
-        document.getElementById('output').innerHTML = 'Hai diritto allo sconto del 40% !'
+    else if (eta == "anziano"){
+        let finalPrice = (parseFloat(price - overDisc)).toFixed(2);
+        console.log(finalPrice);
+        document.getElementById('output').innerHTML = finalPrice + ' €';
+        document.getElementById('offerta').innerHTML = 'Sconto al 40%';
     }
-    else if (eta == maggiorenne){
-        console.log('Nessuno sconto applicato');
-        underDisc = 0;
-        console.log(price);
+    else{
+        let finalPrice = price.toFixed(2);
+        console.log(finalPrice);
+        document.getElementById('output').innerHTML = finalPrice + ' €';
+        document.getElementById('offerta').innerHTML = 'Biglietto Standard';
     }
     
+    
 })
+
+    
 
 btn2.addEventListener('click', function(){
     inputNome.value = '';

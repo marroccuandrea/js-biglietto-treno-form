@@ -1,0 +1,10 @@
+body{
+    background-image: url(treni-a-idrogeno-e1639385379493.jpg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container h1{
+    color: #FFC008;
+    text-shadow: 1px 1px black;
+}
