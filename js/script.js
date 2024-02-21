@@ -17,3 +17,9 @@ btn1.addEventListener('click', function(){
 
     console.log(nome, km, eta);
 })
+
+btn2.addEventListener('click', function(){
+    inputNome.value = '';
+    inputKm.value = '';
+    selectAge.value = '';
+})
