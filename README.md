@@ -14,6 +14,6 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 4. Creazione i pulsanti di invio e reset
 5. Implementazione codice generazione biglietto
 6. Salvo i dati inseriti negli input in delle variabili
-7. Inserisco la fascia di età
+7. Inserisco la fascia di età e la salvo in una variabile
 8. Stampo in pagina il biglietto con il prezzo e il nome del titolare di esso
 9. Creo la funziona reset e la assegno al bottone annulla
